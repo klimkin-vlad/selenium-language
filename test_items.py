@@ -10,3 +10,4 @@ def test_guest_should_see_buy_link(browser):
     time.sleep(60)
     assert len(elements) >= 1, "Корзина не найдена"
     assert len(elements) <= 1, "Неверный селектор"
+    assert elements[0].is_displayed(), "Кнопка не видна"
